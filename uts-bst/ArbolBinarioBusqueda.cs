@@ -27,7 +27,13 @@ namespace uts_bst
                 actual.Izq = InsertarRecursivo(actual.Izq, valor);
             else if (valor > actual.Valor)
                 actual.Der = InsertarRecursivo(actual.Der, valor);
-
+            //else
+            //{
+            //    // Llegamos aquí si valor == actual.Valor
+            //    Console.WriteLine($"[AVISO]: El ID {valor} ya existe. No se permiten duplicados.");
+            //    // En un sistema real aquí se lanzaría una Excepción:
+            //    // throw new InvalidOperationException("ID Duplicado");
+            //}
             return actual;
         }
         // Método para buscar un valor en el árbol binario de búsqueda
